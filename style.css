@@ -128,3 +128,58 @@ body {
 .slider {
     display: block;
 } 
+
+
+  
+.button{
+    position:relative;
+    display:inline-block;
+    margin-bottom: 1em;
+  }
+  
+.button a{
+    text-decoration:none;
+    background-color:#DFD9E2;
+    display:block;
+    position:relative;
+    padding: .5em 1.5em;
+    color: black;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.button a .eraser {
+      padding: .5em 2em;
+}
+  
+.active{
+    top:10px;
+    background-color:#6A66A3;
+}
+  
+.button:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#000000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.clear:active{
+    top:10px;
+    background-color:#6A66A3;
+}
+
+.clear {
+    box-sizing: content-box;
+    padding-left: 0.5em 20px;
+}
+
