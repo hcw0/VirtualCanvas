@@ -79,4 +79,47 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2em;
 }
+
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-picker > p {
+    font-size: 1.2em;
+    margin-bottom: .2em;
+
+}
+
+#color-selector {
+    height: 8em;
+    width: 8em;
+    border: 0;
+    outline: none;
+    padding: 0;
+    -webkit-appearance: none;
+    box-shadow: 1px 4px 10px black;
+    cursor: pointer;
+    margin: 0;
+    border-radius: .2em;
+    background: black;
+    border-radius: 1em;
+}
+
+::-webkit-color-swatch{
+    border: none;
+}
+
+.slider-container > p {
+    display: inline-block;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.slider {
+    display: block;
+} 

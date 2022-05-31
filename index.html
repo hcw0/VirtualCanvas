@@ -26,13 +26,17 @@
             <div class="content">
                 <div class="canvas-container">
                     <div class="canvas">
-
                     </div>
                 </div>
                 <div class="menu">
                     <div class="color-picker">
-                        <label for="colorpicker">Color: </label>
-                        <input type="color" value="#000000">
+                        <p>Color</p>
+                        <input id="color-selector" type="color" value="#000000">
+                    </div>
+                    <div class="slider-container">
+                        <p>Grid size: </p>
+                        <p class="grid-size-display">16 x 16</p>
+                        <input type="range" min="1" max="64" value="16" class="slider">
                     </div>
                 </div>
             </div>
