@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    /* outline: 2px solid red; */
+}
+
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    background-color: #DFD9E2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+
+.header-container > h1 {
+    font-family: 'Shadows Into Light', "Karla", sans-serif;
+    font-size: 3em;
+    padding-top: .2em;
+    font-style: italic;
+    margin-bottom: 0;
+    border-top: 2px solid black;
+}
+
+.header-container > p {
+    font-family: 'Shadows Into Light', "Karla", sans-serif;
+    margin-top: 0;
+    padding-bottom: .8em;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 75vh;
+}
+
+.canvas-container {
+    display: flex;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12em;
+}
+
+.canvas {
+    height: 90%;
+    width: 70%;
+    outline: 2px solid black;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+
+.menu {
+    width: 20vw;
+    margin-right: auto;
+    border : solid black;
+    background-color: white;
+    border-width: 5px 3px 3px 5px;
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(1deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
