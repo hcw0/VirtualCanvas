@@ -55,6 +55,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-left: 12em;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .canvas {
