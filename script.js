@@ -1,4 +1,5 @@
 let mousePress = false;
+let eraserToggler = false;
 
 let setGridSize = (size) => {
     let parent = document.querySelector(".canvas-container");
@@ -13,10 +14,17 @@ let setGridSize = (size) => {
         let gridItem = document.createElement("div");
         gridItem.style.cssText = "outline: 1px solid #C5C5C5; background-color: white";
         gridItem.addEventListener("click", () => {
-            gridItem.style.cssText = `background-color: ${color_selector.value}`;
+            if(eraserToggler){
+                gridItem.style.cssText = `outline: 1px solid #C5C5C5; background-color: white`;
+            } else{
+                gridItem.style.cssText = `background-color: ${color_selector.value}`;
+            }
+
         });
         gridItem.addEventListener("mousemove", () => {
-            if(mousePress){
+            if(mousePress && eraserToggler){
+                gridItem.style.cssText = `outline: 1px solid #C5C5C5; background-color: white`;
+            } else if(mousePress && !eraserToggler){
                 gridItem.style.cssText = `background-color: ${color_selector.value}`;
             }
         })
@@ -27,10 +35,10 @@ let setGridSize = (size) => {
 let body = document.querySelector("body");
 
 
-let setTrue = () => mousePress = true;
-let setFalse = () => mousePress = false;
-body.onmousedown = setTrue;
-body.onmouseup = setFalse;
+let setMousePressTrue = () => mousePress = true;
+let setMousePressFalse = () => mousePress = false;
+body.onmousedown = setMousePressTrue;
+body.onmouseup = setMousePressFalse;
 
 let color_selector = document.getElementById("color-selector");
 let changeBackground = () => {
@@ -50,6 +58,11 @@ slider.oninput = () => {
     document.querySelector(".slider-container").insertBefore(p, slider);
     setGridSize(slider.value);
 }
+
+let setEraserToggler = () => eraserToggler ? eraserToggler = false : eraserToggler = true;
+
+let eraserButton = document.querySelector(".eraser");
+eraserButton.addEventListener("click", () => setEraserToggler());
 
 setGridSize(16);
 
